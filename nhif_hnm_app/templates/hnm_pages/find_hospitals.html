@@ -1,0 +1,26 @@
+{% extends 'hnm_pages/base.html'%}
+{% load bootstrap4 %}
+
+
+{% block content %}
+{{ block.super }}
+
+
+  <div class="container search">
+    <div class="jumbotron jumbotron-fluid vcenter">
+      <div class="row d-block text-center">
+
+        <h3> Type a location to find NHIF-registered hospitals</h3>
+
+        <div class="md-form active-cyan active-cyan-2 mb-3 d-flex justify-content-center">
+            <form action="{% url 'search' %}" class="form-inline searchForm">
+              <input class="form-control mr-lg-1" name="Search" type="search" placeholder="Find a hospital... &#xF002;" style="font-family:Arial, FontAwesome" aria-label="Search">
+            </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

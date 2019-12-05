@@ -7,7 +7,7 @@
     padding-top: .07rem;
     padding-bottom: .07rem;
     height: 88vh;
-    background-color: aqua;
+    background-color: #0d47a1;
 }
 
 .carousel-item {
@@ -30,14 +30,31 @@
 
 .about {
     padding-bottom: .05rem;
-    background-color: aqua;
+    /* background-color: #24bced; */
+    background-image: linear-gradient(to bottom right, #8fc6fd, rgb(214, 214, 253));
     color: #070707;
 }
 
 .nhifLink {
-    color: blue;
+    color: rgb(12, 12, 12);
 }
 
 .nhifLink:hover {
     color: #24bced;
 }
+
+.search {
+    height: 89vh;
+}
+.vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid 1px #333;
+    border-radius: 30px;
+}
+
+.searchForm input{
+    text-align:center;
+    font-size: large;
+ }
