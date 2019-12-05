@@ -1,13 +1,17 @@
-
+body {
+    padding-top: 67px;
+    background-color: #000408!important;
+}
 .nav-link:hover {
-    border-bottom: 1px solid aqua;
+    border-bottom: 1px solid #070707;
 }
 
 #carousel-example-2 {
     padding-top: .07rem;
     padding-bottom: .07rem;
     height: 88vh;
-    background-color: #0d47a1;
+    /* background-image: linear-gradient(to bottom right, lightgray, white); */
+    background: #000408;
 }
 
 .carousel-item {
@@ -29,8 +33,7 @@
 }
 
 .about {
-    padding-bottom: .05rem;
-    /* background-color: #24bced; */
+    margin-top: 5vh;
     background-image: linear-gradient(to bottom right, #8fc6fd, rgb(214, 214, 253));
     color: #070707;
 }
