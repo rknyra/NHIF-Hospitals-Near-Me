@@ -4,22 +4,35 @@
     height: 88vh;
     background-color: aqua;
 }
+
 .carousel-item {
     max-height: 87vh;
 }
+
 .whiteLink {
     color: white;
     font-weight: bold;
 }
+
 .whiteLink:hover {
     color: aqua;
 }
+
 .blueLink {
     color: cyan;
     font-weight: bold;
 }
+
 .about {
     padding-bottom: .05rem;
     background-color: aqua;
     color: #070707;
+}
+
+.nhifLink {
+    color: blue;
+}
+
+.nhifLink:hover {
+    color: #24bced;
 }
