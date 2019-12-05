@@ -1,0 +1,19 @@
+#carousel-example-2 {
+    padding-top: .07rem;
+    padding-bottom: 1rem;
+    height: 88vh;
+}
+.carousel-item {
+    max-height: 87vh;
+}
+.whiteLink {
+    color: white;
+    font-weight: bold;
+}
+.whiteLink:hover {
+    color: aqua;
+}
+.blueLink {
+    color: cyan;
+    font-weight: bold;
+}
