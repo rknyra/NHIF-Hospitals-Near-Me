@@ -1,7 +1,8 @@
 #carousel-example-2 {
     padding-top: .07rem;
-    padding-bottom: 1rem;
+    padding-bottom: .07rem;
     height: 88vh;
+    background-color: aqua;
 }
 .carousel-item {
     max-height: 87vh;
@@ -16,4 +17,9 @@
 .blueLink {
     color: cyan;
     font-weight: bold;
+}
+.about {
+    padding-bottom: .05rem;
+    background-color: aqua;
+    color: #070707;
 }
