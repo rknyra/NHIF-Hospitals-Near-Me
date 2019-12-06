@@ -6,7 +6,7 @@ import datetime as dt
 class Hospital(models.Model):
     hospital_name = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
-    website = models.URLField(max_length=350, null=True)
+    website = models.URLField(max_length=350, null=True, blank=True)
     
     def save_hospital(self):
             self.save()
@@ -22,7 +22,7 @@ class Hospital(models.Model):
 
 
 class Review(models.Model):
-    comments = models.CharField(max_length=1000, blank=True)
+    reviews = models.CharField(max_length=1000, blank=True)
     hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, default=None)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     
