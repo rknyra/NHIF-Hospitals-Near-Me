@@ -1,0 +1,50 @@
+{% extends 'hnm_pages/base.html'%}
+{% load bootstrap4 %}
+
+
+{% block content %}
+{{ block.super }}
+
+<div class="container-fluid reviews">
+    <div class="row">
+
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> <!-- start of hosp card column-->
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                        <img class="card-img-top rounded-circle" src="/static/images/favicon.jpeg" alt="Notice Image" style="max-height:250px; max-width:250px;">
+                    </div>
+                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 align-self-center">
+                        <p class="card-text"> Hospital name </p>
+                        <p class="card-text"> Location:  </p>
+                        <p class="card-text"> Posted on: <br> by: </p>
+                        <p>
+                             <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> See Reviews  </a>
+                        </p>
+
+                        <!-- start of hospital reviews/comments loop -->
+                        <p  class="collapse" id="collapseExample"> comments/reviews will be looped here</p>
+                        <!-- end of hospital reviews/comments loop-->
+
+                        <div>
+                        <p> insert 'post your reviews' form here </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of hosp card column-->
+
+
+       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 scrollResources"> <!-- select hosp card/column-->
+            <div class="card border-info slightOpaicty">
+                <div class="card-header"> Select a Hospital to Review </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p> insert hospital selection form here </p>
+                        </div>
+                    </div>
+            </div>
+        </div> <!-- end of selection column -->
+    </div> <!-- end of row -->
+</div> <!-- end of container -->
+{% endblock %}
