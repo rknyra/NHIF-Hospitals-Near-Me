@@ -61,3 +61,17 @@ body {
     text-align:center;
     font-size: large;
  }
+ .reviews {
+    padding-top: 1rem;
+ }
+
+#share {
+    font-size: 21px;
+    font-weight: bold;
+    color: #0275d8;
+    
+}
+#share a {
+    font-size: 21px;
+    font-weight: bold; 
+ }

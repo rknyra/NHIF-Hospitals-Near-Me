@@ -13,3 +13,8 @@ def index(request):
 def search(request):
     
     return render(request, 'hnm_pages/find_hospitals.html', locals())
+
+#hospital reviews
+def reviews(request):
+    
+    return render(request, 'hnm_pages/hospital_reviews.html', locals())

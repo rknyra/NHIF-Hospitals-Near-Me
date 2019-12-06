@@ -23,7 +23,7 @@
           <div class="mask rgba-black-light"></div>
         </div>
         <div class="carousel-caption">
-          <h1 class="h1-responsive"> <a href="/" class="whiteLink"> Join the community and share your hospital reviews </a> </h1>
+          <h1 class="h1-responsive"> <a href="/reviews" class="whiteLink"> Join the community and share your hospital reviews </a> </h1>
         </div>
       </div>
       <div class="carousel-item">
@@ -34,7 +34,7 @@
           <div class="mask rgba-black-strong"></div>
         </div>
         <div class="carousel-caption">
-          <h1 class="h1-responsive"> <a href="/" class="whiteLink"> Let others know how easy it now is to find a hospital </a> </h1>
+          <h1 class="h1-responsive"> <a href="{% url 'index' %}#share" class="whiteLink"> Let others know how easy it now is to find a hospital </a> </h1>
         </div>
       </div>
       <div class="carousel-item">
@@ -45,7 +45,7 @@
           <div class="mask rgba-black-strong"></div>
         </div>
         <div class="carousel-caption">
-          <h1 class="h1-responsive"> <a href="/" class="whiteLink"> Find NHIF-registered hospitals near you </a> </h1>
+          <h1 class="h1-responsive"> <a href="/search" class="whiteLink"> Find NHIF-registered hospitals near you </a> </h1>
         </div>
       </div>
     </div>
@@ -74,8 +74,14 @@
         <li> Click the <strong> find a hospital </strong> link on the navbar to be navigated to the search page, </li>
         <li> You'll then <strong> select a location </strong> so as to retrieve a list of hospitals in that location, </li>
         <li> You can then <strong> select a hospital </strong> from your search results so as to view more information about it. </li>
-        <li> You can also <strong> register or login </strong> so that you can <strong> <a href="/"> see hospital reviews or share your own experience/review of a hospital you visited. </a> </strong> </li> 
+        <li> You can also <strong> register or login </strong> so that you can <strong> <a href="/reviews"> see hospital reviews or share your own experience/review of a hospital you visited. </a> </strong> </li> 
       </ol>
+
+      <p class="text-center whiteLink" id="share"> Share on: 
+      <a href="https://twitter.com/share" class="mr-3"> <i class="fa fa-twitter"> </i> Twitter</i> </a> 
+      <a href="https://linkedin.com/share" class="mr-3"> <i class="fa fa-linkedin"> </i> Linkedin</i> </a> 
+      <a href="https://facebook.com/share"> <i class="fa fa-facebook"> </i> Facebook</i> </a> 
+      </p>
     </div>
   </div>
 <!-- end of ABOUT SECTION -->
