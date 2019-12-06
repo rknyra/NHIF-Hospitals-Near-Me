@@ -1,6 +1,7 @@
 body {
     padding-top: 67px;
-    background-color: #000408!important;
+    /* background-color: #000408!important; */
+    background: #fff;
 }
 .nav-link:hover {
     border-bottom: 1px solid #070707;
