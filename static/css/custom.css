@@ -62,7 +62,7 @@ body {
     text-align:center;
     font-size: large;
  }
- .reviews {
+ .reviews, .search {
     padding-top: 1rem;
  }
 
