@@ -5,46 +5,46 @@
 {% block content %}
 {{ block.super }}
 
-<div class="container-fluid reviews">
+<div class="container reviews">
     <div class="row">
+        
+        {% for hospital in hospitals %}
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-2"> <!-- start of hosp card column-->
+                <div class="card">
+                    <div class="card-body row">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                            <img class="card-img-top rounded-circle" src="/static/images/favicon.jpeg" alt="Notice Image" style="max-height:250px; max-width:250px;">
+                        </div>
+                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 align-self-center">
+                            <p class="card-text"> {{ hospital.hospital_name }} </p>
+                            <p class="card-text"> Location: {{ hospital.location }}  </p>
+                            <p>
+                                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> See Reviews  {{ hospital.review_set.all|length }} </a>
+                            </p>
 
-        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> <!-- start of hosp card column-->
-            <div class="card">
-                <div class="card-body row">
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
-                        <img class="card-img-top rounded-circle" src="/static/images/favicon.jpeg" alt="Notice Image" style="max-height:250px; max-width:250px;">
-                    </div>
-                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 align-self-center">
-                        <p class="card-text"> Hospital name </p>
-                        <p class="card-text"> Location:  </p>
-                        <p class="card-text"> Posted on: <br> by: </p>
-                        <p>
-                             <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> See Reviews  </a>
-                        </p>
+                            <!-- start of hospital reviews/comments loop -->
+                            {% for review in hospital.review_set.all %}
+                            <p  class="collapse" id="collapseExample"> {{ review.reviews }} reviewed by: {{ review.user }} </p>
+                            {% endfor %}
+                            <!-- end of hospital reviews/comments loop-->
 
-                        <!-- start of hospital reviews/comments loop -->
-                        <p  class="collapse" id="collapseExample"> comments/reviews will be looped here</p>
-                        <!-- end of hospital reviews/comments loop-->
+                            
+                            <div> <!-- hospital reviews/comment form -->
+                                <form  action="{% url 'single_hospital_reviews' hospital_id=hospital.id %}" method="post">
+                                    {% csrf_token %}
+                                    {% bootstrap_form reviewsForm layout='inline' %}
 
-                        <div>
-                        <p> insert 'post your reviews' form here </p>
+                                    <div class="form-group">
+                                    <input type="submit" class="btn btn-primary btn-sm my-2" value="Share your review/experience">
+                                    </div>
+                                </form>                      
+                            </div> <!-- end of hospital review/comment form -->
                         </div>
                     </div>
                 </div>
-            </div>
         </div> <!-- end of hosp card column-->
+        {% endfor %}
 
-
-       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 scrollResources"> <!-- select hosp card/column-->
-            <div class="card border-info slightOpaicty">
-                <div class="card-header"> Select a Hospital to Review </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <p> insert hospital selection form here </p>
-                        </div>
-                    </div>
-            </div>
-        </div> <!-- end of selection column -->
     </div> <!-- end of row -->
 </div> <!-- end of container -->
 {% endblock %}

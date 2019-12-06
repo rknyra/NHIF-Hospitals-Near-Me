@@ -10,14 +10,25 @@ def index(request):
     
     return render(request, 'index.html', locals())
 
+
 #find hospitals
 def search(request):
     
     return render(request, 'hnm_pages/find_hospitals.html', locals())
 
-#hospital reviews
-def reviews(request, hospital_id):
+
+#all hospitals reviews
+def reviews(request):
+    hospitals = Hospital.objects.all()
     reviewsForm = ReviewsForm()
+
+    return render (request, 'hnm_pages/hospital_reviews.html', locals())
+
+
+#single hospital reviews
+def singleHospitlaReviews(request, hospital_id):
+    reviewsForm = ReviewsForm()
+        
     if request.method == 'POST':
         reviewsForm = ReviewsForm(request.POST)
         if reviewsForm.is_valid():
@@ -25,5 +36,6 @@ def reviews(request, hospital_id):
             form.user=request.user
             form.hospital=get_object_or_404(Hospital,pk=hospital_id)
             form.save()
-    
-    return redirect('reviews', hospital_id)
+        return redirect('single_hospital_reviews', hospital_id)
+    else:
+        return redirect('all_reviews')
