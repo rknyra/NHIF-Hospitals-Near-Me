@@ -72,11 +72,19 @@
       <p class="lead"> This app was made with you in mind...to make it easier for you to find the NHIF-registered hospitals near you/in your location. To make the most of this app, just follow the steps below:</p>
       <ol>
         <li> Click the <strong> find a hospital </strong> link on the navbar to be navigated to the search page, </li>
-        <li> You'll then <strong> select a location </strong> so as to retrieve a list of hospitals in that location, </li>
-        <li> You can then <strong> select a hospital </strong> from your search results so as to view more information about it. </li>
-        <li> You can also <strong> register or login </strong> so that you can <strong> <a href="/all-reviews"> see hospital reviews or share your own experience/review of a hospital you visited. </a> </strong> </li> 
+        <li> You'll then <strong> enter a location in the search bar</strong> so as to retrieve a list of hospitals in that location, </li>
+        <li> From your search results, you can then click on the <strong>view website</strong> link if any, so as to see more information about that hospital. </li>
+
+
+        {% if user.is_authenticated %}
+         <li> You can also <strong> register and login </strong> so that you can <strong> <a href="/all-reviews" class="reviewsLink"> see hospital reviews or share your own experience/review of a hospital you visited. </a> </strong> </li> 
+        {% else %}
+         <li> You can also <strong> <a class="reviewsLink" href="/accounts/login">register and login </a> </strong> so that you can <strong> <a href="/all-reviews" class="reviewsLink"> see hospital reviews or share your own experience/review of a hospital you visited. </a> </strong> </li> 
+        {% endif %}
       </ol>
 
+      <hr class="blueHr">
+      <h4 class="text-center share"> You can also let others know how easy it now is to find a hospital </h4>
       <p class="text-center whiteLink" id="share"> Share on: 
       <a href="https://twitter.com/share" class="mr-3"> <i class="fa fa-twitter"> </i> Twitter</i> </a> 
       <a href="https://linkedin.com/share" class="mr-3"> <i class="fa fa-linkedin"> </i> Linkedin</i> </a> 

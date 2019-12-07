@@ -18,14 +18,34 @@
             <a class="nav-link" href="{% url 'index' %}#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/search">Find Hospital</a>
+            <a class="nav-link" href="/search">Find a Hospital</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/all-reviews"}>Hospital Reviews</a>
           </li>
+
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+                <a class="nav-link" href="#" id="popover">  {{request.user.username}} <i class="fa fa-user-circle-o" style="font-size:20px"></i>  </a>
+                
+                <div id="popover-head" style="display:none;">
+                  <h3> Hi {{ request.user.username }}! </h3>
+                  <p> We hope you're enjoying your NHIF-HNM experience </p>
+                </div>
+                <div id="popover-content" style="display:none;">
+                  <img src="/static/images/happyclient.png">
+                <a class='nav-link' href='/logout'><i class='fa fa-sign-out' style='font-size:30px'></i> rudi tena :) </a>
+                </div> 
+
+          </li>
+      {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/accounts/login">Register/Login </a>
+          </li>
+        {% endif %}
         </ul>
       </div>
     </nav>
 
-  </header>
+</header>
 
