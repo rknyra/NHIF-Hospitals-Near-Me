@@ -1,6 +1,5 @@
 body {
     padding-top: 67px;
-    /* background-color: #000408!important; */
     background: #fff;
 }
 .nav-link:hover {
@@ -10,9 +9,6 @@ body {
 #carousel-example-2 {
     padding-top: .07rem;
     padding-bottom: .07rem;
-    height: 88vh;
-    /* background-image: linear-gradient(to bottom right, lightgray, white); */
-    background: #000408;
 }
 
 .carousel-item {
@@ -34,10 +30,23 @@ body {
 }
 
 .about {
-    margin-top: 5vh;
+    margin-top: 3vh;
     background-image: linear-gradient(to bottom right, #8fc6fd, rgb(214, 214, 253));
     color: #070707;
 }
+
+.reviewsLink {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.reviewsLink:hover {
+    color: yellow;
+    text-decoration: solid underline gold;
+    background-color: black;
+    
+}
+
 
 .nhifLink {
     color: rgb(12, 12, 12);
@@ -62,8 +71,18 @@ body {
     text-align:center;
     font-size: large;
  }
- .reviews, .search {
+ .reviews, .search, .login {
     padding-top: 1rem;
+ }
+ .blueHR {
+     color: #070707;
+     font-weight: bold;
+ }
+
+ .share {
+    font-size: 21px;
+    font-weight: bold;
+    color: #0275d8;
  }
 
 #share {
@@ -76,3 +95,26 @@ body {
     font-size: 21px;
     font-weight: bold; 
  }
+
+.form-text {
+    display: none;
+}
+.hospImg {
+    max-width: 100%;
+    max-height: 100%;
+}
+.popover-header {
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #8fc6fd, rgb(214, 214, 253));
+}
+.popover-body {
+    text-align: center;
+    background-color: white;
+}
+.popover-body img {
+    width: 190px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: black;
+
+}
