@@ -23,9 +23,14 @@
                             </p>
 
                             <!-- start of hospital reviews/comments loop -->
+                            <div class="collapse" id="{{ hospital.id }}">
+
                             {% for review in hospital.review_set.all %}
-                            <p  class="collapse" id="{{ hospital.id }}"> {{ review.reviews }} reviewed by: {{ review.user }} </p>
+                                <p> {{ review.reviews }} reviewed by: {{ review.user }} </p>
+                            
                             {% endfor %}
+                            </div>
+
                             <!-- end of hospital reviews/comments loop-->
 
                             

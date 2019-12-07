@@ -9,9 +9,9 @@
 
      <div class="row searchResults justify-content-center">
         {% if searched_hospitals %}
-            <h2>Found {{ searched_hospitals |length }} hospital(s) releated to "{{message}}"</h2>
+            <h2>Found {{ searched_hospitals |length }} hospital(s) near/in "{{message}}"</h2>
         {% else %}
-            <h2 >  Found 0 hospitals related to "{{message}}" </h2>
+            <h2 >  Found 0 hospitals near/in "{{message}}" </h2>
             <h3> You can try searching for hospitals in a different location </h3>
             {% include 'hnm_pages/find_hospitals.html' %}
 
