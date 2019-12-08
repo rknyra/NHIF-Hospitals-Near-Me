@@ -26,7 +26,7 @@
                             <div class="collapse" id="{{ hospital.id }}">
 
                             {% for review in hospital.review_set.all %}
-                                <p> <img class="rounded" src="/static/images/comentingAvatar3.jpeg" style="width:15px; height:20px;"> {{ review.user }} said: {{ review.reviews }} <br> 
+                                <p> <img class="rounded" src="/static/images/comentingAvatar3.jpeg" style="width:15px; height:20px;"> <strong> {{ review.user }}:</strong> {{ review.reviews }} <br> 
                                  </p>
                             
                             {% endfor %}

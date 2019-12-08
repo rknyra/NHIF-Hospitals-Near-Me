@@ -5,16 +5,31 @@
 {% block content %}
 {{ block.super }}
 
-<div class="container search">
+<div class="container">
 
-     <div class="row searchResults justify-content-center">
+     <div class="row justify-content-center" style="padding-top:4vh;">
         {% if searched_hospitals %}
-            <h2>Found {{ searched_hospitals |length }} hospital(s) near/in "{{message}}"</h2>
+            <h2>Found {{ searched_hospitals |length }} NHIF-registered hospital(s) near/in "{{message}}"</h2>
         {% else %}
-            <h2 >  Found 0 hospitals near/in "{{message}}" </h2>
-            <h3> You can try searching for hospitals in a different location </h3>
-            {% include 'hnm_pages/find_hospitals.html' %}
+            <h2 >  Found 0 NHIF-registered hospitals near/in "{{message}}" </h2>
+            <h3> You can try searching in a different location </h3>
 
+            <!-- ====== search form ================ -->
+            <div class="container" style="padding-top:3vh;"> 
+                <div class="jumbotron jumbotron-fluid vcenter">
+                    <div class="row d-block text-center">
+
+                        <h3> Type a location to find NHIF-registered hospitals</h3>
+
+                        <div class="md-form active-cyan active-cyan-2 mb-3 d-flex justify-content-center">
+                            <form action="{% url 'search_hospitals' %}" class="form-inline searchForm">
+                                <input class="form-control mr-lg-1" name="search" type="search" placeholder="Search...  &#xF002;" style="font-family:Arial, FontAwesome;" aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ======== end of search form ====-->
         {% endif %}
     </div> <!-- end of first row -->
 
@@ -39,7 +54,8 @@
                             <div class="collapse" id="{{ hospital.id }}">
 
                             {% for review in hospital.review_set.all %}
-                                <p> {{ review.reviews }} reviewed by: {{ review.user }} </p>
+                                 <p> <img class="rounded" src="/static/images/comentingAvatar3.jpeg" style="width:15px; height:20px;"> <strong> {{ review.user }}: </strong> {{ review.reviews }} <br> 
+                                 </p>
                             
                             {% endfor %}
                             </div>

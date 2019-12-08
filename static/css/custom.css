@@ -43,10 +43,8 @@ body {
 .reviewsLink:hover {
     color: yellow;
     text-decoration: solid underline gold;
-    background-color: black;
-    
+    background-color: black;   
 }
-
 
 .nhifLink {
     color: rgb(12, 12, 12);
@@ -71,6 +69,7 @@ body {
     text-align:center;
     font-size: large;
  }
+
  .reviews, .search, .login {
     padding-top: 1rem;
  }
