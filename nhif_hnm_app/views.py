@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import ReviewsForm
+from django.contrib.auth.decorators import login_required
 
 
 #views
@@ -41,6 +42,7 @@ def reviews(request):
 
 
 #single hospital reviews
+@login_required(login_url='/accounts/login')
 def singleHospitlaReviews(request, hospital_id):
     reviewsForm = ReviewsForm()
         
