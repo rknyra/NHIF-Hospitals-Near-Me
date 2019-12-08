@@ -26,19 +26,24 @@
                 <div class="card">
                     <div class="card-body row">
                         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
-                            <img class="card-img-top rounded-circle" src="/static/images/favicon.jpeg" alt="Notice Image" style="max-height:250px; max-width:250px;">
+                            <img class="card-img-top rounded-circle hospImg" src="/static/images/favicon.jpeg" alt="Notice Image" style="height:200px; width:200px;">
                         </div>
                         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 align-self-center">
                             <p class="card-text"> {{ hospital.hospital_name }} </p>
                             <p class="card-text"> Location: {{ hospital.location }}  </p>
                             <p>
-                                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> See Reviews  {{ hospital.review_set.all|length }} </a>
+                                <a data-toggle="collapse" href="#{{ hospital.id }}" role="button" aria-expanded="false" aria-controls="collapseExample"> See Reviews  {{ hospital.review_set.all|length }} </a>
                             </p>
 
                             <!-- start of hospital reviews/comments loop -->
+                            <div class="collapse" id="{{ hospital.id }}">
+
                             {% for review in hospital.review_set.all %}
-                            <p  class="collapse" id="collapseExample"> {{ review.reviews }} reviewed by: {{ review.user }} </p>
+                                <p> {{ review.reviews }} reviewed by: {{ review.user }} </p>
+                            
                             {% endfor %}
+                            </div>
+
                             <!-- end of hospital reviews/comments loop-->
 
                             
@@ -58,6 +63,6 @@
         </div> <!-- end of hosp card column-->
         {% endfor %}
 
-    </div> <!-- end of second row -->
+    </div> <!-- end of row -->
 </div> <!-- end of container -->
 {% endblock %}
