@@ -24,6 +24,7 @@ class Hospital(models.Model):
 class Review(models.Model):
     reviews = models.CharField(max_length=1000, blank=True)
     hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, default=None)
+    review_date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     
     def save_review(self):
