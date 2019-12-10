@@ -128,6 +128,9 @@ body {
     background-image: linear-gradient(to bottom right, #8fc6fd, rgb(214, 214, 253));
 }
 
+.postedOn {
+    color: rgb(97, 97, 97);
+}
 
 @media only screen 
   and (device-width: 360px){

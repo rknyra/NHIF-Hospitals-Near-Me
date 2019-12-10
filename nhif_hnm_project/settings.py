@@ -65,7 +65,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'nhif_hnm_app',
     'bootstrap4',
-    'django_registration'
+    'django_registration',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

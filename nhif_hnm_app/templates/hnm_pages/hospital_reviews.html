@@ -21,14 +21,14 @@
                             <p class="card-text"> <a href="{{ hospital.website }}"> Visit {{ hospital.hospital_name }}'s website </a>  </p>
 
                             <p>
-                                <a data-toggle="collapse" href="#{{ hospital.id }}" role="button" aria-expanded="false" aria-controls="collapseExample"> See Reviews  {{ hospital.review_set.all|length }} </a>
+                                <a data-toggle="collapse" href="#{{ hospital.id }}" role="button" aria-expanded="false" aria-controls="collapseExample"> See {{ hospital.review_set.all|length }} review{{hospital.review_set.all|pluralize}} </a>
                             </p>
 
                             <!-- start of hospital reviews/comments loop -->
                             <div class="collapse" id="{{ hospital.id }}">
 
                             {% for review in hospital.review_set.all %}
-                                <p> <img class="rounded" src="/static/images/comentingAvatar3.jpeg" style="width:15px; height:20px;"> <strong> {{ review.user }}:</strong> on {{review.review_date}} <br> {{ review.reviews }} 
+                                <p> <img class="rounded" src="/static/images/comentingAvatar3.jpeg" style="width:15px; height:20px;"> <strong> {{ review.user }}:</strong> <span class="postedOn"> on {{review.review_date}} </span> <br> {{ review.reviews }} 
                                  </p>
                             
                             {% endfor %}

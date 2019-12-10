@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import ReviewsForm
 from django.contrib.auth.decorators import login_required
+from rest_framework import viewsets
+from .serializers import HospitalSerializer
 
 
 #views
@@ -45,6 +47,8 @@ def reviews(request):
 @login_required(login_url='/accounts/login')
 def singleHospitlaReviews(request, hospital_id):
     reviewsForm = ReviewsForm()
+    hospital = get_object_or_404(Hospital,pk=hospital_id)
+
         
     if request.method == 'POST':
         reviewsForm = ReviewsForm(request.POST)
@@ -53,8 +57,12 @@ def singleHospitlaReviews(request, hospital_id):
             form.user=request.user
             form.hospital=get_object_or_404(Hospital,pk=hospital_id)
             form.save()
-        return redirect('single_hospital_reviews', hospital_id)
-    else:
-        return redirect('all_reviews')
+    return redirect('all_reviews')
 
 
+class HospitalViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows viewing of NHIF-registered hospitals
+    """
+    queryset = Hospital.objects.all()
+    serializer_class = HospitalSerializer
