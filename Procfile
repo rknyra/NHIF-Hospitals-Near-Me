@@ -1,1 +1,1 @@
-web: gunicorn nhif_hnm_project.wsgi
+web: gunicorn nhif_hnm_project.wsgi --log-file -
