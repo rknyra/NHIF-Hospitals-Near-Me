@@ -1,0 +1,1 @@
+web: gunicorn nhif_hnm_project.wsgi
