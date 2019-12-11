@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import ReviewsForm
 from django.contrib.auth.decorators import login_required
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .serializers import HospitalSerializer
+from .permissions import isAdminOrReadOnly
 
 
 #views
@@ -66,3 +67,4 @@ class HospitalViewSet(viewsets.ModelViewSet):
     """
     queryset = Hospital.objects.all()
     serializer_class = HospitalSerializer
+    permission_classes = [isAdminOrReadOnly]

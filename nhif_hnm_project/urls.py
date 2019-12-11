@@ -19,6 +19,7 @@ from django_registration.backends.one_step.views import RegistrationView
 from django.contrib.auth import views
 from rest_framework import routers
 from nhif_hnm_app.views import HospitalViewSet
+from rest_framework.authtoken.views import obtain_auth_token
 
 
 router = routers.DefaultRouter()
@@ -32,5 +33,6 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
     path('logout/',views.LogoutView.as_view(),{'next_page':'/'}),
     path('',include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-token-auth/', obtain_auth_token)
 ]
