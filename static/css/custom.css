@@ -132,13 +132,20 @@ body {
     color: rgb(97, 97, 97);
 }
 
+.form-group label {
+    display: none;
+}
+
+.topBuffer {
+    margin-top: 1rem;
+}
+
 @media only screen 
   and (device-width: 360px){
 .midSlide3 {
     margin-top: -40%;
 }
 }
-
 
 @media only screen 
   and (device-width: 411px){

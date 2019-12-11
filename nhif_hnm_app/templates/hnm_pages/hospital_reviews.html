@@ -21,7 +21,7 @@
                             <p class="card-text"> <a href="{{ hospital.website }}"> Visit {{ hospital.hospital_name }}'s website </a>  </p>
 
                             <p>
-                                <a data-toggle="collapse" href="#{{ hospital.id }}" role="button" aria-expanded="false" aria-controls="collapseExample"> See {{ hospital.review_set.all|length }} review{{hospital.review_set.all|pluralize}} </a>
+                                <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#{{ hospital.id }}" role="button" aria-expanded="false" aria-controls="collapseExample"> See {{ hospital.review_set.all|length }} review{{hospital.review_set.all|pluralize}} </a>
                             </p>
 
                             <!-- start of hospital reviews/comments loop -->
