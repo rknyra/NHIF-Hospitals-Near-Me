@@ -3,7 +3,7 @@
 ##### Built by **RK Nyra**
 
 ### Description
-An app that helps users to easily find NHIF-registered hospitals near a given location.
+An app that helps users to easily find NHIF-registered hospitals near/in a given location.
 
 ### Setup/Installation Requirements
 * Github and Heroku account - from where the application can be cloned or downloaded
