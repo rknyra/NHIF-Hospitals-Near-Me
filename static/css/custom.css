@@ -1,6 +1,10 @@
 body {
     padding-top: 67px;
     background: #fff;
+    /* font-family: 'Lora', serif; */
+    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Kalam', cursive; */
+    /* font-family: 'Patrick Hand', cursive; */
 }
 
 .nav-link:hover {

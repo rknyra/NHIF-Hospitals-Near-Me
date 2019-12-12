@@ -5,6 +5,10 @@
 ### Description
 An app that helps users to easily find NHIF-registered hospitals near/in a given location.
 
+### app images
+![GitHub Logo](/images/logo.png)
+Format: ![NHIF-hnm landing page](url)
+
 ### Setup/Installation Requirements
 * Github and Heroku account - from where the application can be cloned or downloaded
 * Git installed in pc - for downloading the application to interact with it locally i.e. on one's device
