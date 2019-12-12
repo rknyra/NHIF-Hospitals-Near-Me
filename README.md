@@ -7,7 +7,8 @@ An app that helps users to easily find NHIF-registered hospitals near/in a given
 
 ### app images
 ![LandingPage](/static/images/LandingPage.png)
-Format: ![NHIF-hnm landing page](url)
+![SearchPage](/static/images/SearchPage.png)
+![HospitalReviewsPage](/static/images/HospitalReviews2.png)
 
 ### Setup/Installation Requirements
 * Github and Heroku account - from where the application can be cloned or downloaded
