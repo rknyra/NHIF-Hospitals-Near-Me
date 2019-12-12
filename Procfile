@@ -1,1 +1,1 @@
-web: gunicorn capstone-project-ms.wsgi --log-file
+web: gunicorn nhif_hnm_project.wsgi
