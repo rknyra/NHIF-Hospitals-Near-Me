@@ -6,7 +6,7 @@
 An app that helps users to easily find NHIF-registered hospitals near/in a given location.
 
 ### app images
-![GitHub Logo](/images/logo.png)
+![LandingPage](/static/images/LandingPage.png)
 Format: ![NHIF-hnm landing page](url)
 
 ### Setup/Installation Requirements
